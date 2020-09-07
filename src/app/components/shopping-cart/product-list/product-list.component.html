@@ -1,0 +1,10 @@
+<div class="row" *ngIf="prod.length>0">
+    <div class="col-md-4" style ="text-align: center" *ngFor="let i of prod">
+      <app-product-item [product]= 'i'></app-product-item>
+    </div>
+</div>
+<div class="row" *ngIf="prod.length==0">
+  <div clas="col-md-4" style="text-align: center">
+    <b>No data matches your search</b>
+  </div>
+</div>

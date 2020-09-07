@@ -1,0 +1,10 @@
+<ul class="list-group">
+    <span *ngIf="commonService.cart.length > 0">
+    <li class="list-group-item" *ngFor="let i of commonService.cart">
+        <app-cart-item [cart]="i"></app-cart-item>
+    </li>
+    </span>
+    <li class="list-group-item active">
+         <strong>Total : {{commonService.total | currency:'INR' }}</strong>
+    </li>
+</ul>
